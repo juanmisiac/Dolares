@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-image: url(../img/fondo-dolares.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    background: linear-gradient(#4d23a8c1, #2130a3c1);
+    width: 1200px;
+    height: 500px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.35);
+    color: rgb(229, 229, 229);
+}
+
+th, td{
+    background-color: #6d19c76c;
+    font-size: 18px;
+    padding: 12px;
+    text-align: center;
+    line-height: 28px;
+    box-shadow: 0px 0px 2px black;
+}
+
+#info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+#info a{
+    color: rgb(173, 255, 47);
+    text-decoration: none;
+}
+
+#info a:hover{
+    color: rgb(113, 177, 16);
+    transition: .2s ease;
+}
