@@ -44,7 +44,7 @@ th, td{
     box-shadow: 0px 0px 1px rgba(255, 255, 255, 0.35);
 }
 
-.tabla{
+.tabla-desktop{
     grid-area: tabla;
 }
 
@@ -118,4 +118,47 @@ th, td{
     justify-content: space-evenly;
     align-items: center;
     margin-top: 16px;
+}
+
+/*--- MOBILE ---*/
+
+@media (width > 768px){
+
+    .tabla-mobile{
+        display: none;
+    }
+
+}
+
+@media (375px <= width <= 768px){
+
+    .tabla-desktop{
+        display: none;
+    }
+
+    *{
+        font-size: 12px;
+    }
+
+    body {
+        background-image: url(../img/fondo-dolares-mobile.webp);
+        margin: 50px;
+    }
+
+    #contenedor{
+        display: flex;
+        flex-direction: column;
+        background: none;
+        box-shadow: none;
+    }
+
+    td{
+        font-size: 12px;
+        padding: 4px 24px;
+    }
+
+    #juan, #enzo{
+        width: 350px;
+    }
+
 }

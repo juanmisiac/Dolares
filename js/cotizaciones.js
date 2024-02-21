@@ -5,8 +5,12 @@ function getCotizaciones() {
             const monedas = ["oficial", "blue", "bolsa", "ccl", "mayorista", "cripto", "tarjeta"];
 
             monedas.forEach(m => {
-                const elemento = document.querySelector(`#${m}`);
-                elemento.innerHTML = `<td>Compra: $${data[monedas.indexOf(m)].compra} <br> Venta: $${data[monedas.indexOf(m)].venta}</td>`;
+                const elementoDesktop = document.querySelector(`#${m}`);
+                const elementoMobile = document.querySelector(`#${m}-mobile`);
+                
+                elementoDesktop.innerHTML = `<td>Compra: $${data[monedas.indexOf(m)].compra} <br> Venta: $${data[monedas.indexOf(m)].venta}</td>`;
+                
+                elementoMobile.textContent = `Compra: $${data[monedas.indexOf(m)].compra} ----- Venta: $${data[monedas.indexOf(m)].venta}`;
             });
         })
         .catch(error => {
