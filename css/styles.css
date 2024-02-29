@@ -47,6 +47,9 @@ th, td{
 .tabla-desktop{
     grid-area: tabla;
 }
+.tabla-mobile{
+    display: none;
+}
 
 #juan{
     grid-area: juan;
@@ -120,43 +123,54 @@ th, td{
     margin-top: 16px;
 }
 
-/*--- MOBILE ---*/
+/*---MEDIA QUERIES---*/
 
-@media (width > 768px){
-
+@media (769px <= width <= 1200px){
+    
     .tabla-mobile{
         display: none;
+    }
+    *{
+        font-size: 12px;
+    }
+    #contenedor{
+        width: 800px;
+    }
+    th, td{
+        font-size: 12px;
+        padding: 5px;
+    }
+    #juan, #enzo{
+        height: 160px;
     }
 
 }
 
-@media (375px <= width <= 768px){
+@media (320px <= width <= 768px){
 
     .tabla-desktop{
         display: none;
     }
-
+    .tabla-mobile{
+        display: table;
+    }
     *{
         font-size: 12px;
     }
-
     body {
         background-image: url(../img/fondo-dolares-mobile.webp);
         margin: 50px;
     }
-
     #contenedor{
         display: flex;
         flex-direction: column;
         background: none;
         box-shadow: none;
     }
-
     td{
         font-size: 12px;
         padding: 4px 24px;
     }
-
     #juan, #enzo{
         width: 350px;
     }

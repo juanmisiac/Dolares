@@ -21,3 +21,5 @@ function getCotizaciones() {
 getCotizaciones();
 
 setInterval(getCotizaciones, 1 * 60 * 1000); // Actualiza los datos cada 1 minuto (expresado en milisegundos)
+
+
