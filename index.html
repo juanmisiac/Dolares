@@ -7,6 +7,9 @@
 
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu&display=swap" rel="stylesheet">
     
 </head>
 <body>
@@ -36,31 +39,31 @@
             
         <table class="tabla-mobile">
             <tr>
-                <td>Oficial</td>
+                <th>Oficial</th>
                 <td id="oficial-mobile"></td>
             </tr>
             <tr>
-                <td>Blue</td>
+                <th>Blue</th>
                 <td id="blue-mobile"></td>
             </tr>
             <tr>
-                <td>Bolsa</td>
+                <th>Bolsa</th>
                 <td id="bolsa-mobile"></td>
             </tr>
             <tr>
-                <td>CCL</td>
+                <th>CCL</th>
                 <td id="ccl-mobile"></td>
             </tr>
             <tr>
-                <td>Mayorista</td>
+                <th>Mayorista</th>
                 <td id="mayorista-mobile"></td>
             </tr>
             <tr>
-                <td>Cripto</td>
+                <th>Cripto</th>
                 <td id="cripto-mobile"></td>
             </tr>
             <tr>
-                <td>Tarjeta</td>
+                <th>Tarjeta</th>
                 <td id="tarjeta-mobile"></td>
             </tr>
         </table>
@@ -94,6 +97,25 @@
             <a href="https://es.js.org/" target="_blank">
                 <img src="./img/EsJS-logo.png" alt="EsJS" id="esjs">
             </a>
+        </article>
+
+        <article id="conversor">
+            <h2>Convertir USD a ARS</h2>
+            <p>Seleccione la cotización del dolar que quiere convertir a pesos:</p>
+            <div id="select-usd">
+                <button id="btn-oficial">Oficial</button>
+                <button id="btn-blue">Blue</button>
+                <button id="btn-bolsa">Bolsa</button>
+                <button id="btn-ccl">CCL</button>
+                <button id="btn-mayorista">Mayorista</button>
+                <button id="btn-cripto">Cripto</button>
+                <button id="btn-tarjeta">Tarjeta</button>
+            </div>
+            <div id="inputs-conv">
+                <input type="text" name="cant-dolar" id="cant-dolar" placeholder="USD">
+                <img src="./img/exchange.svg" alt="exchange" id="exchange">
+                <input type="text" name="cant-peso" id="cant-peso" placeholder="ARS">
+            </div>
         </article>
     
     </section>

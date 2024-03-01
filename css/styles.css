@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: "Roboto";
 }
 
 body {
@@ -20,12 +20,13 @@ body {
     justify-content: center;
     align-items: center;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas: 
         "tabla tabla"
-        "juan enzo"
+        "juan conversor"
+        "enzo conversor"
     ;
-    font-size: 1.5rem;
+    gap: 16px;
     background: linear-gradient(#522ca4c1, #212e8dc1);
     width: 1200px;
     height: 500px;
@@ -37,8 +38,8 @@ body {
 
 th, td{
     background-color: #2411586c;
-    font-size: 17px;
-    padding: 12px;
+    font-size: 14px;
+    padding: 6px;
     text-align: center;
     line-height: 28px;
     box-shadow: 0px 0px 1px rgba(255, 255, 255, 0.35);
@@ -61,11 +62,10 @@ th, td{
         "lij ghj"
     ;
     background-color:#2411586c;
-    margin: 20px;
-    padding: 20px;
+    padding: 16px;
     box-shadow: 0px 0px 2px rgba(255, 255, 255, 0.35);
     border-radius: .75rem;
-    font-size: 18px;
+    font-size: 15px;
 }
 
 #enzo{
@@ -78,11 +78,10 @@ th, td{
         "lie ghe esjs"
     ;
     background-color: #2411586c;
-    margin: 20px;
-    padding: 20px;
+    padding: 16px;
     box-shadow: 0px 0px 2px rgba(255, 255, 255, 0.35);
     border-radius: .75rem;
-    font-size: 18px;
+    font-size: 15px;
 }
 
 #p-juan{
@@ -92,27 +91,31 @@ th, td{
     grid-area: penzo;
 }
 
+article a img:hover{
+    transform: scale(1.1);
+    transition: .1s ease;
+}
 #lij{
     grid-area: lij;
-    width: 48px;
+    width: 40px;
     display: flex;
 }
 #ghj{
     grid-area: ghj;
-    width: 40px;
+    width: 32px;
 }
 
 #lie{
     grid-area: lie;
-    width: 48px;
+    width: 40px;
 }
 #ghe{
     grid-area: ghe;
-    width: 40px;
+    width: 32px;
 }
 #esjs{
     grid-area: esjs;
-    width: 40px;
+    width: 32px;
 }
 
 #juan a,
@@ -122,6 +125,66 @@ th, td{
     align-items: center;
     margin-top: 16px;
 }
+
+#conversor{
+    grid-area: conversor;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    background-color: #2411586c;
+    padding: 16px;
+    box-shadow: 0px 0px 2px rgba(255, 255, 255, 0.35);
+    border-radius: .75rem;
+    font-size: 15px;
+    height: 100%;
+}
+#select-usd button{
+    margin: 10px 6px 10px 0px;
+    padding: 10px;
+    font-size: 14px;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.4);
+    background-color:rgb(49, 29, 165) ;
+    /*2d0882*/
+}
+#select-usd button:hover{
+    transition: .1s ease;
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.5);
+    transform: scale(1.03);
+    background-color: #260b67;
+    cursor: pointer;
+}
+#inputs-conv{
+    display: flex;
+    margin-top: 10px;
+}
+#inputs-conv input{
+    padding: 10px;
+    text-align: center;
+    font-size: 15px;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    width: 40%;
+}
+h2{
+    margin: 0;
+}
+#conversor p{
+    margin: 10px 0px 10px 0px;
+}
+#exchange{
+    margin-inline: 16px;
+}#exchange:hover{
+    transition: .2s ease;
+    transform: scale(1.15);
+    cursor: pointer;
+}
+
 
 /*---MEDIA QUERIES---*/
 
@@ -167,7 +230,7 @@ th, td{
         background: none;
         box-shadow: none;
     }
-    td{
+    th, td{
         font-size: 12px;
         padding: 4px 24px;
     }
