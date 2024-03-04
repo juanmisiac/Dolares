@@ -190,6 +190,18 @@ h2{
     transform: scale(1.15);
     cursor: pointer;
 }
+.exc-animation{
+    animation: rotate-center 0.5s ease-in-out both;;
+}
+
+@keyframes rotate-center {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 
 
 /*---MEDIA QUERIES---*/

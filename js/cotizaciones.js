@@ -12,7 +12,7 @@ function getCotizaciones() {
                 const elementoDesktop = document.querySelector(`#${m}`);
                 const elementoMobile = document.querySelector(`#${m}-mobile`);
                 
-                elementoDesktop.innerHTML = `<td>Compra: $${data[monedas.indexOf(m)].compra} <br> Venta: $${data[monedas.indexOf(m)].venta}</td>`;
+                elementoDesktop.innerHTML = `Compra: $${data[monedas.indexOf(m)].compra} <br> Venta: $${data[monedas.indexOf(m)].venta}`;
                 
                 elementoMobile.textContent = `Compra: $${data[monedas.indexOf(m)].compra} ----- Venta: $${data[monedas.indexOf(m)].venta}`;
             });
@@ -33,7 +33,8 @@ const btnOficial = document.querySelector('#btn-oficial'),
       btnCcl = document.querySelector('#btn-ccl'),
       btnMayorista = document.querySelector('#btn-mayorista'),
       btnCripto = document.querySelector('#btn-cripto'),
-      btnTarjeta = document.querySelector('#btn-tarjeta');
+      btnTarjeta = document.querySelector('#btn-tarjeta'),
+      btnExchange = document.querySelector('#exchange');
 
 //EVENT LISTENERS
 btnOficial.addEventListener('click', () => {
@@ -98,4 +99,11 @@ btnTarjeta.addEventListener('click', () => {
 
     btnTarjeta.classList.add('boton-seleccionado');
 });
+
+btnExchange.addEventListener('click', () => {
+    btnExchange.classList.add('exc-animation');
+    setTimeout(function() {
+        btnExchange.classList.remove('exc-animation');
+    }, 1000);
+})
 
