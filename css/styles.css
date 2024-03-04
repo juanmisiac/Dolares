@@ -139,7 +139,7 @@ article a img:hover{
     font-size: 15px;
     height: 100%;
 }
-#select-usd button{
+.boton-conversor{
     margin: 10px 6px 10px 0px;
     padding: 10px;
     font-size: 14px;
@@ -151,14 +151,14 @@ article a img:hover{
     background-color:rgb(49, 29, 165) ;
     /*2d0882*/
 }
-#select-usd button:hover{
+.boton-conversor:hover{
     transition: .1s ease;
     box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.5);
     transform: scale(1.03);
     background-color: #260b67;
     cursor: pointer;
 }
-#select-usd button:focus{
+.boton-seleccionado{    /*Solo aplicado cuando se hace click mediante JS*/
     background-color: #260b67;
     box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.5);
     transform: scale(1.03);
