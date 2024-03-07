@@ -38,7 +38,7 @@ const btnOficial = document.querySelector('#btn-oficial'),
 
 //EVENT LISTENERS
 btnOficial.addEventListener('click', () => {
-    console.log(`$${cotizacionesData[monedas.indexOf("oficial")].compra}`);
+    console.log(`$${cotizacionesData[monedas.indexOf("oficial")].venta}`);
 
     const botones = document.querySelectorAll('.boton-conversor');
     botones.forEach(boton => boton.classList.remove('boton-seleccionado'));
@@ -47,7 +47,7 @@ btnOficial.addEventListener('click', () => {
 });
 
 btnBlue.addEventListener('click', () => {
-    console.log(`$${cotizacionesData[monedas.indexOf("blue")].compra}`);
+    console.log(`$${cotizacionesData[monedas.indexOf("blue")].venta}`);
 
     const botones = document.querySelectorAll('.boton-conversor');
     botones.forEach(boton => boton.classList.remove('boton-seleccionado'));
@@ -56,7 +56,7 @@ btnBlue.addEventListener('click', () => {
 });
 
 btnBolsa.addEventListener('click', () => {
-    console.log(`$${cotizacionesData[monedas.indexOf("bolsa")].compra}`);
+    console.log(`$${cotizacionesData[monedas.indexOf("bolsa")].venta}`);
 
     const botones = document.querySelectorAll('.boton-conversor');
     botones.forEach(boton => boton.classList.remove('boton-seleccionado'));
@@ -65,7 +65,7 @@ btnBolsa.addEventListener('click', () => {
 });
 
 btnCcl.addEventListener('click', () => {
-    console.log(`$${cotizacionesData[monedas.indexOf("ccl")].compra}`);
+    console.log(`$${cotizacionesData[monedas.indexOf("ccl")].venta}`);
 
     const botones = document.querySelectorAll('.boton-conversor');
     botones.forEach(boton => boton.classList.remove('boton-seleccionado'));
@@ -74,7 +74,7 @@ btnCcl.addEventListener('click', () => {
 });
 
 btnMayorista.addEventListener('click', () => {
-    console.log(`$${cotizacionesData[monedas.indexOf("mayorista")].compra}`);
+    console.log(`$${cotizacionesData[monedas.indexOf("mayorista")].venta}`);
 
     const botones = document.querySelectorAll('.boton-conversor');
     botones.forEach(boton => boton.classList.remove('boton-seleccionado'));
@@ -83,7 +83,7 @@ btnMayorista.addEventListener('click', () => {
 });
 
 btnCripto.addEventListener('click', () => {
-    console.log(`$${cotizacionesData[monedas.indexOf("cripto")].compra}`);
+    console.log(`$${cotizacionesData[monedas.indexOf("cripto")].venta}`);
 
     const botones = document.querySelectorAll('.boton-conversor');
     botones.forEach(boton => boton.classList.remove('boton-seleccionado'));
@@ -92,7 +92,7 @@ btnCripto.addEventListener('click', () => {
 });
 
 btnTarjeta.addEventListener('click', () => {
-    console.log(`$${cotizacionesData[monedas.indexOf("tarjeta")].compra}`);
+    console.log(`$${cotizacionesData[monedas.indexOf("tarjeta")].venta}`);
 
     const botones = document.querySelectorAll('.boton-conversor');
     botones.forEach(boton => boton.classList.remove('boton-seleccionado'));
@@ -100,10 +100,61 @@ btnTarjeta.addEventListener('click', () => {
     btnTarjeta.classList.add('boton-seleccionado');
 });
 
+let inpPeso = document.querySelector('#cant-peso'),
+    inpDolar = document.querySelector('#cant-dolar'),
+    valorDolarSeleccionado,
+    valorDolarConvertido;
+    
 btnExchange.addEventListener('click', () => {
     btnExchange.classList.add('exc-animation');
     setTimeout(function() {
         btnExchange.classList.remove('exc-animation');
     }, 1000);
-})
+
+    const btnSeleccionado = document.querySelector('.boton-seleccionado');
+
+    if (btnSeleccionado.id == 'btn-oficial') {
+        
+        valorDolarSeleccionado = cotizacionesData[monedas.indexOf("oficial")].venta;
+        valorDolarConvertido = parseFloat((inpPeso.value / valorDolarSeleccionado).toFixed(2));
+        inpDolar.value = valorDolarConvertido;
+
+    } else if (btnSeleccionado.id == 'btn-blue') {
+        
+        valorDolarSeleccionado = cotizacionesData[monedas.indexOf("blue")].venta;
+        valorDolarConvertido = parseFloat((inpPeso.value / valorDolarSeleccionado).toFixed(2));
+        inpDolar.value = valorDolarConvertido;
+
+    } else if (btnSeleccionado.id == 'btn-bolsa') {
+        
+        valorDolarSeleccionado = cotizacionesData[monedas.indexOf("bolsa")].venta;
+        valorDolarConvertido = parseFloat((inpPeso.value / valorDolarSeleccionado).toFixed(2));
+        inpDolar.value = valorDolarConvertido;
+
+    } else if (btnSeleccionado.id == 'btn-ccl') {
+        
+        valorDolarSeleccionado = cotizacionesData[monedas.indexOf("ccl")].venta;
+        valorDolarConvertido = parseFloat((inpPeso.value / valorDolarSeleccionado).toFixed(2));
+        inpDolar.value = valorDolarConvertido;
+
+    } else if (btnSeleccionado.id == 'btn-mayorista') {
+        
+        valorDolarSeleccionado = cotizacionesData[monedas.indexOf("mayorista")].venta;
+        valorDolarConvertido = parseFloat((inpPeso.value / valorDolarSeleccionado).toFixed(2));
+        inpDolar.value = valorDolarConvertido;
+
+    } else if (btnSeleccionado.id == 'btn-cripto') {
+        
+        valorDolarSeleccionado = cotizacionesData[monedas.indexOf("cripto")].venta;
+        valorDolarConvertido = parseFloat((inpPeso.value / valorDolarSeleccionado).toFixed(2));
+        inpDolar.value = valorDolarConvertido;
+
+    } else if (btnSeleccionado.id == 'btn-tarjeta') {
+        
+        valorDolarSeleccionado = cotizacionesData[monedas.indexOf("tarjeta")].venta;
+        valorDolarConvertido = parseFloat((inpPeso.value / valorDolarSeleccionado).toFixed(2));
+        inpDolar.value = valorDolarConvertido;
+
+    }
+});
 
