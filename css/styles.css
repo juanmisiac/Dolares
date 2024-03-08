@@ -128,6 +128,19 @@ article a img:hover{
     font-size: 15px;
     height: 100%;
 }
+#conv-title{
+    display: flex;
+    justify-content: space-between;
+}
+#conv-title button{
+    background: transparent;
+    border: none;
+}
+#conv-title button:hover{
+    transition: .2s ease;
+    transform: scale(1.15);
+    cursor: pointer;
+}
 .boton-conversor{
     margin: 10px 6px 10px 0px;
     padding: 10px;
