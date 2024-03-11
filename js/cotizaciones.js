@@ -34,9 +34,14 @@ const btnOficial = document.querySelector('#btn-oficial'),
       btnMayorista = document.querySelector('#btn-mayorista'),
       btnCripto = document.querySelector('#btn-cripto'),
       btnTarjeta = document.querySelector('#btn-tarjeta'),
-      btnExchange = document.querySelector('#exchange');
+      btnExchange = document.querySelector('#exchange'),
+      btnCambiarConv = document.querySelector('.arrow-conv');
 
 //EVENT LISTENERS
+btnCambiarConv.addEventListener('click', () => {
+    console.log("boton clickeado");
+});
+
 btnOficial.addEventListener('click', () => {
     console.log(`$${cotizacionesData[monedas.indexOf("oficial")].venta}`);
 
