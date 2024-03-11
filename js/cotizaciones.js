@@ -40,7 +40,6 @@ const btnOficial = document.querySelector('#btn-oficial'),
 //EVENT LISTENERS
 btnCambiarConv.forEach(btn => {
     btn.addEventListener('click', () => {
-        console.log("Conversor cambiado");
 
         const conversorArsUsd = document.querySelector('.conversor-ars-usd');
         const conversorUsdArs = document.querySelector('.conversor-usd-ars');
@@ -56,6 +55,8 @@ btnCambiarConv.forEach(btn => {
             conversorArsUsd.classList.add('conversor-oculto');
 
         }
+
+        console.log("Conversor cambiado");
     });
 });
 
