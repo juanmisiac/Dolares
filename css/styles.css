@@ -221,6 +221,9 @@ h2{
     *{
         font-size: 12px;
     }
+    h2{
+        font-size: 14px;
+    }
     #contenedor{
         width: 800px;
     }
@@ -244,6 +247,9 @@ h2{
     }
     *{
         font-size: 12px;
+    }
+    h2{
+        font-size: 14px;
     }
     body {
         background-image: url(../img/fondo-dolares-mobile.webp);

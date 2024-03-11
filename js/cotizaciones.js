@@ -42,15 +42,19 @@ btnCambiarConv.forEach(btn => {
     btn.addEventListener('click', () => {
         console.log("Conversor cambiado");
 
-        const conversoresArsUsd = document.querySelector('.conversor-ars-usd');
-        const conversoresUsdArs = document.querySelector('.conversor-usd-ars');
+        const conversorArsUsd = document.querySelector('.conversor-ars-usd');
+        const conversorUsdArs = document.querySelector('.conversor-usd-ars');
 
-        if (conversoresArsUsd.classList.contains('conversor-oculto')) {
-            conversoresArsUsd.classList.remove('conversor-oculto');
-            conversoresUsdArs.classList.add('conversor-oculto');
-        } else if (conversoresUsdArs.classList.contains('conversor-oculto')) {
-            conversoresUsdArs.classList.remove('conversor-oculto');
-            conversoresArsUsd.classList.add('conversor-oculto');
+        if (conversorArsUsd.classList.contains('conversor-oculto')) {
+            
+            conversorArsUsd.classList.remove('conversor-oculto');
+            conversorUsdArs.classList.add('conversor-oculto');
+
+        } else if (conversorUsdArs.classList.contains('conversor-oculto')) {
+            
+            conversorUsdArs.classList.remove('conversor-oculto');
+            conversorArsUsd.classList.add('conversor-oculto');
+
         }
     });
 });
