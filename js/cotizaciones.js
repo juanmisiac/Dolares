@@ -34,12 +34,25 @@ const btnOficial = document.querySelector('#btn-oficial'),
       btnMayorista = document.querySelector('#btn-mayorista'),
       btnCripto = document.querySelector('#btn-cripto'),
       btnTarjeta = document.querySelector('#btn-tarjeta'),
-      btnExchange = document.querySelector('#exchange'),
-      btnCambiarConv = document.querySelector('.arrow-conv');
+      btnExchange = document.querySelector('.exchange'),
+      btnCambiarConv = document.querySelectorAll('.arrow-conv');
 
 //EVENT LISTENERS
-btnCambiarConv.addEventListener('click', () => {
-    console.log("boton clickeado");
+btnCambiarConv.forEach(btn => {
+    btn.addEventListener('click', () => {
+        console.log("Conversor cambiado");
+
+        const conversoresArsUsd = document.querySelector('.conversor-ars-usd');
+        const conversoresUsdArs = document.querySelector('.conversor-usd-ars');
+
+        if (conversoresArsUsd.classList.contains('conversor-oculto')) {
+            conversoresArsUsd.classList.remove('conversor-oculto');
+            conversoresUsdArs.classList.add('conversor-oculto');
+        } else if (conversoresUsdArs.classList.contains('conversor-oculto')) {
+            conversoresUsdArs.classList.remove('conversor-oculto');
+            conversoresArsUsd.classList.add('conversor-oculto');
+        }
+    });
 });
 
 btnOficial.addEventListener('click', () => {
@@ -105,8 +118,8 @@ btnTarjeta.addEventListener('click', () => {
     btnTarjeta.classList.add('boton-seleccionado');
 });
 
-let inpPeso = document.querySelector('#cant-peso'),
-    inpDolar = document.querySelector('#cant-dolar'),
+let inpPeso = document.querySelector('.cant-peso'),
+    inpDolar = document.querySelector('.cant-dolar'),
     valorDolarSeleccionado,
     valorDolarConvertido;
     

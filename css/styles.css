@@ -128,15 +128,18 @@ article a img:hover{
     font-size: 15px;
     height: 100%;
 }
-#conv-title{
+.conversor-oculto{
+    display: none;
+}
+.conv-title{
     display: flex;
     justify-content: space-between;
 }
-#conv-title button{
+.conv-title button{
     background: transparent;
     border: none;
 }
-#conv-title button:hover{
+.conv-title button:hover{
     transition: .2s ease;
     transform: scale(1.15);
     cursor: pointer;
@@ -165,11 +168,11 @@ article a img:hover{
     box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.5);
     transform: scale(1.03);
 }
-#inputs-conv{
+.inputs-conv{
     display: flex;
     margin-top: 10px;
 }
-#inputs-conv input{
+.inputs-conv input{
     padding: 10px;
     text-align: center;
     font-size: 15px;
@@ -178,7 +181,7 @@ article a img:hover{
     border-radius: 6px;
     width: 40%;
 }
-#inputs-conv button{
+.inputs-conv button{
     background: transparent;
     border: none;
 }
@@ -188,10 +191,10 @@ h2{
 #conversor p{
     margin: 10px 0px 10px 0px;
 }
-#exchange{
+.exchange{
     margin-inline: 16px;
 }
-#exchange:hover{
+.exchange:hover{
     transition: .2s ease;
     transform: scale(1.15);
     cursor: pointer;

@@ -100,28 +100,56 @@
         </article>
 
         <article id="conversor">
-            <div id="conv-title">
-                <h2>Convertir ARS a USD</h2>
-                <button>
-                    <img src="./img/arrow-exchange.svg" alt="arrow-conv" class="arrow-conv">
-                </button>
+            <div class="conversor-ars-usd">  
+                <div class="conv-title">
+                    <h2>Convertir ARS a USD</h2>
+                    <button>
+                        <img src="./img/arrow-exchange.svg" alt="arrow-conv" class="arrow-conv">
+                    </button>
+                </div>
+                    <p>Seleccione una de las siguientes cotizaciones del dólar:</p>
+                <div class="select-usd">
+                    <button id="btn-oficial" class="boton-conversor">Oficial</button>
+                    <button id="btn-blue" class="boton-conversor">Blue</button>
+                    <button id="btn-bolsa" class="boton-conversor">Bolsa</button>
+                    <button id="btn-ccl" class="boton-conversor">CCL</button>
+                    <button id="btn-mayorista" class="boton-conversor">Mayorista</button>
+                    <button id="btn-cripto" class="boton-conversor">Cripto</button>
+                    <button id="btn-tarjeta" class="boton-conversor">Tarjeta</button>
+                </div>
+                <div class="inputs-conv">
+                    <input type="text" name="cant-peso" class="cant-peso" placeholder="ARS" autocomplete="off">
+                    <button>
+                        <img src="./img/exchange.svg" alt="exchange" class="exchange">
+                    </button>
+                    <input type="text" name="cant-dolar" class="cant-dolar" placeholder="USD" readonly>
+                </div>
             </div>
-                <p>Seleccione una de las siguientes cotizaciones del dólar:</p>
-            <div id="select-usd">
-                <button id="btn-oficial" class="boton-conversor">Oficial</button>
-                <button id="btn-blue" class="boton-conversor">Blue</button>
-                <button id="btn-bolsa" class="boton-conversor">Bolsa</button>
-                <button id="btn-ccl" class="boton-conversor">CCL</button>
-                <button id="btn-mayorista" class="boton-conversor">Mayorista</button>
-                <button id="btn-cripto" class="boton-conversor">Cripto</button>
-                <button id="btn-tarjeta" class="boton-conversor">Tarjeta</button>
-            </div>
-            <div id="inputs-conv">
-                <input type="text" name="cant-peso" id="cant-peso" placeholder="ARS" autocomplete="off">
-                <button>
-                    <img src="./img/exchange.svg" alt="exchange" id="exchange">
-                </button>
-                <input type="text" name="cant-dolar" id="cant-dolar" placeholder="USD" readonly>
+
+            <div class="conversor-usd-ars conversor-oculto">
+                <div class="conv-title">
+                    <h2>Convertir USD a ARS</h2>
+                    <button>
+                        <img src="./img/arrow-exchange.svg" alt="arrow-conv" class="arrow-conv">
+                    </button>
+                </div>
+                    <p>Seleccione una de las siguientes cotizaciones del dólar:</p>
+                <div class="select-usd">
+                    <button id="btn-oficial" class="boton-conversor">Oficial</button>
+                    <button id="btn-blue" class="boton-conversor">Blue</button>
+                    <button id="btn-bolsa" class="boton-conversor">Bolsa</button>
+                    <button id="btn-ccl" class="boton-conversor">CCL</button>
+                    <button id="btn-mayorista" class="boton-conversor">Mayorista</button>
+                    <button id="btn-cripto" class="boton-conversor">Cripto</button>
+                    <button id="btn-tarjeta" class="boton-conversor">Tarjeta</button>
+                </div>
+                <div class="inputs-conv">
+                    <input type="text" name="cant-dolar" class="cant-dolar" placeholder="USD" autocomplete="off">
+                    <button>
+                        <img src="./img/exchange.svg" alt="exchange" class="exchange">
+                    </button>
+                    <input type="text" name="cant-peso" class="cant-peso" placeholder="ARS" readonly>
+                </div>
             </div>
         </article>
     
