@@ -132,7 +132,7 @@ btnExchange.addEventListener('click', () => {
     btnExchange.classList.add('exc-animation');
     setTimeout(function() {
         btnExchange.classList.remove('exc-animation');
-    }, 1000);
+    }, 500);
 
     const btnSeleccionado = document.querySelector('.boton-seleccionado');
 
