@@ -27,6 +27,7 @@ getCotizaciones();
 
 setInterval(getCotizaciones, 1 * 60 * 1000); // Actualiza los datos cada 1 minuto (expresado en milisegundos)
 
+//EVENT LISTENERS
 const btnOficial = document.querySelectorAll('.btn-oficial'),
       btnBlue = document.querySelectorAll('.btn-blue'),
       btnBolsa = document.querySelectorAll('.btn-bolsa'),
@@ -37,9 +38,8 @@ const btnOficial = document.querySelectorAll('.btn-oficial'),
       btnExchange = document.querySelectorAll('.exchange'),
       btnCambiarConv = document.querySelectorAll('.arrow-conv');
 
-//EVENT LISTENERS
-const conversorArsUsd = document.querySelector('.conversor-ars-usd');
-const conversorUsdArs = document.querySelector('.conversor-usd-ars');
+const conversorArsUsd = document.querySelector('.conversor-ars-usd'),
+      conversorUsdArs = document.querySelector('.conversor-usd-ars');
 
 btnCambiarConv.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -60,7 +60,7 @@ btnCambiarConv.forEach(btn => {
     });
 });
 
-//Event Listeners del Conversor ARS a USD
+//Event Listeners de los botones selectores de cotizaciónes
 btnOficial.forEach(btn => {
     btn.addEventListener('click', () => {
         console.log(`$${cotizacionesData[monedas.indexOf("oficial")].venta}`);
@@ -138,25 +138,25 @@ btnTarjeta.forEach(btn => {
     });
 });
 
-let inpPeso = document.querySelector('.cant-peso'),
-    inpDolar = document.querySelector('.cant-dolar'),
+let inpPeso = document.querySelector('.cant-peso'),   //Modificar los nombres y hacerlos id diferentes para c/ conversor
+    inpDolar = document.querySelector('.cant-dolar'), //Modificar los nombres y hacerlos id diferentes para c/ conversor
     valorDolarSeleccionado,
     valorDolarConvertido;
    
-    btnExchange.forEach(btn => {
-        btn.addEventListener('click', () => {
-            btn.classList.add('exc-animation');
-            setTimeout(function() {
-                btn.classList.remove('exc-animation');
-            }, 500);
-    
-            const btnSeleccionado = document.querySelector('.boton-seleccionado');
-            const monedaSeleccionada = btnSeleccionado.classList[0].replace('btn-', '');
-    
-            valorDolarSeleccionado = cotizacionesData[monedas.indexOf(monedaSeleccionada)].venta;
-            valorDolarConvertido = parseFloat((inpPeso.value / valorDolarSeleccionado).toFixed(2));
-            inpDolar.value = valorDolarConvertido;
-        });
+btnExchange.forEach(btn => {
+    btn.addEventListener('click', () => {
+        btn.classList.add('exc-animation');
+        setTimeout(function() {
+            btn.classList.remove('exc-animation');
+        }, 500);
+
+        const btnSeleccionado = document.querySelector('.boton-seleccionado');
+        const monedaSeleccionada = btnSeleccionado.classList[0].replace('btn-', '');
+
+        valorDolarSeleccionado = cotizacionesData[monedas.indexOf(monedaSeleccionada)].venta;
+        valorDolarConvertido = parseFloat((inpPeso.value / valorDolarSeleccionado).toFixed(2));
+        inpDolar.value = valorDolarConvertido;
     });
-    
+});
+
 
