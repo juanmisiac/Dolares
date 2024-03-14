@@ -138,10 +138,12 @@ btnTarjeta.forEach(btn => {
     });
 });
 
-let inpPeso = document.querySelector('.cant-peso'),   //Modificar los nombres y hacerlos id diferentes para c/ conversor
-    inpDolar = document.querySelector('.cant-dolar'), //Modificar los nombres y hacerlos id diferentes para c/ conversor
+let inpPesoAU = document.querySelector('#cant-peso-a-u'),
+    inpDolarAU = document.querySelector('#cant-dolar-a-u'),
+    inpPesoUA = document.querySelector('#cant-peso-u-a'),
+    inpDolarUA = document.querySelector('#cant-dolar-u-a'),
     valorDolarSeleccionado,
-    valorDolarConvertido;
+    valorDolarPesoConvertido;
    
 btnExchange.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -153,9 +155,19 @@ btnExchange.forEach(btn => {
         const btnSeleccionado = document.querySelector('.boton-seleccionado');
         const monedaSeleccionada = btnSeleccionado.classList[0].replace('btn-', '');
 
-        valorDolarSeleccionado = cotizacionesData[monedas.indexOf(monedaSeleccionada)].venta;
-        valorDolarConvertido = parseFloat((inpPeso.value / valorDolarSeleccionado).toFixed(2));
-        inpDolar.value = valorDolarConvertido;
+        if (conversorArsUsd.classList.contains('conversor-oculto') == false) {
+            
+            valorDolarSeleccionado = cotizacionesData[monedas.indexOf(monedaSeleccionada)].venta;
+            valorDolarPesoConvertido = parseFloat((inpPesoAU.value / valorDolarSeleccionado).toFixed(2));
+            inpDolarAU.value = valorDolarPesoConvertido;
+
+        } else if (conversorUsdArs.classList.contains('conversor-oculto') == false) {
+            
+            valorDolarSeleccionado = cotizacionesData[monedas.indexOf(monedaSeleccionada)].venta;
+            valorDolarPesoConvertido = parseFloat((inpDolarUA.value * valorDolarSeleccionado).toFixed(2));
+            inpPesoUA.value = valorDolarPesoConvertido;
+
+        }
     });
 });
 
