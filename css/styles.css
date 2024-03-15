@@ -191,6 +191,10 @@ h2{
 #conversor p{
     margin: 10px 0px 10px 0px;
 }
+.error-message{
+    display: none;
+    color: red;
+}
 .exchange{
     margin-inline: 16px;
 }
