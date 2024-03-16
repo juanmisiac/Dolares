@@ -189,5 +189,5 @@ const errorParagraphs = document.querySelectorAll('.error-message');
     para que aparezca cuando el usuario ejecuta btnExchange
     sin antes haber puesto un valor en los inputs*/
 
-    /*Añadir la capacidad de sacar la clase 'boton-seleccionado' en caso de ya estar presente en dicho boton*/
+    /*Añadir la capacidad de sacar la clase 'boton-seleccionado' en caso de ya estar presente en dicho boton (con un if)*/
 
