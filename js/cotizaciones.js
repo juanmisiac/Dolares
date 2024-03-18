@@ -41,6 +41,7 @@ const btnOficial = document.querySelectorAll('.btn-oficial'),
 const conversorArsUsd = document.querySelector('.conversor-ars-usd'),
       conversorUsdArs = document.querySelector('.conversor-usd-ars');
 
+//Event Listener del btnCambiarConv, para cambiar el conversor que se muestra al usuario
 btnCambiarConv.forEach(btn => {
     btn.addEventListener('click', () => {
 
@@ -138,6 +139,7 @@ btnTarjeta.forEach(btn => {
     });
 });
 
+//Event Listener del btnExchange, para realizar la conversión
 let inpPesoAU = document.querySelector('#cant-peso-a-u'),
     inpDolarAU = document.querySelector('#cant-dolar-a-u'),
     inpPesoUA = document.querySelector('#cant-peso-u-a'),
@@ -182,6 +184,7 @@ btnExchange.forEach(btn => {
     });
 });
 
+//Función que activa la animacion del btnExchange para que el usuario sepa que debe interactuar con el
 function executeExchangeAnimation() {
     btnExchange.forEach(button => {
         button.style.animationName = "rotate-center";
@@ -194,16 +197,19 @@ function executeExchangeAnimation() {
     });
 }
 
-setInterval(executeExchangeAnimation, 8000);
-    
-    /*Añadir nuevo error: 
-        
-    "Ingrese un valor a convertir primero" 
-    
-    para que aparezca cuando el usuario ejecuta btnExchange
-    sin antes haber puesto un valor en los inputs*/
+setInterval(executeExchangeAnimation, 8000);    //Vuelve a ejecutar la función cada 8 segundos
 
-    /*Añadir la capacidad de sacar la clase 'boton-seleccionado' en caso de ya estar presente en dicho boton (con un if)*/
+/*
+
+COMENTARIOS DE FUTURAS ACTUALIZACIONES:
+
+-Añadir nuevo error: "Ingrese un valor a convertir primero" 
+para que aparezca cuando el usuario ejecuta btnExchange
+sin antes haber puesto un valor en los inputs
+
+-Añadir la capacidad de sacar la clase 'boton-seleccionado' en caso de ya estar presente en dicho boton (con un if)
+
+*/
 
     
 
