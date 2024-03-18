@@ -148,39 +148,53 @@ let inpPesoAU = document.querySelector('#cant-peso-a-u'),
 
 const errorParagraphs = document.querySelectorAll('.error-message');            
 
-    btnExchange.forEach(btn => {
-        btn.addEventListener('click', () => {
-            btn.classList.add('exc-animation');
-            setTimeout(function() {
-                btn.classList.remove('exc-animation');
-            }, 500);
-            
-            let monedaSeleccionada;
-            const btnSeleccionado = document.querySelector('.boton-seleccionado');
+btnExchange.forEach(btn => {
+    btn.addEventListener('click', () => {
+        btn.classList.add('exc-animation');
+        setTimeout(function() {
+            btn.classList.remove('exc-animation');
+        }, 1000);
+        
+        let monedaSeleccionada;
+        const btnSeleccionado = document.querySelector('.boton-seleccionado');
 
-            if (btnSeleccionado != null) {
+        if (btnSeleccionado != null) {
+            
+            monedaSeleccionada = btnSeleccionado.classList[0].replace('btn-', '');
+
+            if (conversorArsUsd.classList.contains('conversor-oculto') == false) {
                 
-                monedaSeleccionada = btnSeleccionado.classList[0].replace('btn-', '');
-    
-                if (conversorArsUsd.classList.contains('conversor-oculto') == false) {
-                    
-                    valorDolarSeleccionado = cotizacionesData[monedas.indexOf(monedaSeleccionada)].venta;
-                    valorDolarPesoConvertido = parseFloat((inpPesoAU.value / valorDolarSeleccionado).toFixed(2));
-                    inpDolarAU.value = valorDolarPesoConvertido;
+                valorDolarSeleccionado = cotizacionesData[monedas.indexOf(monedaSeleccionada)].venta;
+                valorDolarPesoConvertido = parseFloat((inpPesoAU.value / valorDolarSeleccionado).toFixed(2));
+                inpDolarAU.value = valorDolarPesoConvertido;
 
-                } else if (conversorUsdArs.classList.contains('conversor-oculto') == false) {
-                    
-                    valorDolarSeleccionado = cotizacionesData[monedas.indexOf(monedaSeleccionada)].venta;
-                    valorDolarPesoConvertido = parseFloat((inpDolarUA.value * valorDolarSeleccionado).toFixed(2));
-                    inpPesoUA.value = valorDolarPesoConvertido;
+            } else if (conversorUsdArs.classList.contains('conversor-oculto') == false) {
+                
+                valorDolarSeleccionado = cotizacionesData[monedas.indexOf(monedaSeleccionada)].venta;
+                valorDolarPesoConvertido = parseFloat((inpDolarUA.value * valorDolarSeleccionado).toFixed(2));
+                inpPesoUA.value = valorDolarPesoConvertido;
 
-                }
-    
-                errorParagraphs.forEach(paragraph => paragraph.style.display = 'none');
-            
-            } else {errorParagraphs.forEach(paragraph => paragraph.style.display = 'block')}
-        });
+            }
+
+            errorParagraphs.forEach(paragraph => paragraph.style.display = 'none');
+        
+        } else {errorParagraphs.forEach(paragraph => paragraph.style.display = 'block')}
     });
+});
+
+function executeExchangeAnimation() {
+    btnExchange.forEach(button => {
+        button.style.animationName = "rotate-center";
+        button.style.animationDuration = "1s";
+        button.style.animationTimingFunction = "ease";
+
+        setTimeout(() => {
+            button.style.animationName = "";
+        }, 1000);
+    });
+}
+
+setInterval(executeExchangeAnimation, 8000);
     
     /*Añadir nuevo error: 
         
@@ -190,4 +204,6 @@ const errorParagraphs = document.querySelectorAll('.error-message');
     sin antes haber puesto un valor en los inputs*/
 
     /*Añadir la capacidad de sacar la clase 'boton-seleccionado' en caso de ya estar presente en dicho boton (con un if)*/
+
+    
 

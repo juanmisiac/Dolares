@@ -141,7 +141,7 @@ article a img:hover{
 }
 .conv-title button:hover{
     transition: .2s ease;
-    transform: scale(1.15);
+    transform: scale(1.18);
     cursor: pointer;
 }
 .boton-conversor{
@@ -203,8 +203,12 @@ h2{
     transform: scale(1.15);
     cursor: pointer;
 }
+.exchange:not(hover),
+.conv-title button:not(hover){
+    transition: .2s ease;
+}
 .exc-animation{
-    animation: rotate-center 0.5s ease-in-out both;;
+    animation: rotate-center .5s ease both;;
 }
 @keyframes rotate-center {
     0% {
