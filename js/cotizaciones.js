@@ -27,7 +27,7 @@ getCotizaciones();
 
 setInterval(getCotizaciones, 1 * 60 * 1000); // Actualiza los datos cada 1 minuto (expresado en milisegundos)
 
-//EVENT LISTENERS
+//Botones
 const btnOficial = document.querySelectorAll('.btn-oficial'),
       btnBlue = document.querySelectorAll('.btn-blue'),
       btnBolsa = document.querySelectorAll('.btn-bolsa'),
@@ -38,6 +38,7 @@ const btnOficial = document.querySelectorAll('.btn-oficial'),
       btnExchange = document.querySelectorAll('.exchange'),
       btnCambiarConv = document.querySelectorAll('.arrow-conv');
 
+//Conversores
 const conversorArsUsd = document.querySelector('.conversor-ars-usd'),
       conversorUsdArs = document.querySelector('.conversor-usd-ars');
 
@@ -139,7 +140,7 @@ btnTarjeta.forEach(btn => {
     });
 });
 
-//Event Listener del btnExchange, para realizar la conversión
+//Elementos de los conversores
 let inpPesoAU = document.querySelector('#cant-peso-a-u'),
     inpDolarAU = document.querySelector('#cant-dolar-a-u'),
     inpPesoUA = document.querySelector('#cant-peso-u-a'),
@@ -150,6 +151,7 @@ let inpPesoAU = document.querySelector('#cant-peso-a-u'),
 
 const errorParagraphs = document.querySelectorAll('.error-message');            
 
+//Event Listener del btnExchange, para realizar la conversión
 btnExchange.forEach(btn => {
     btn.addEventListener('click', () => {
         btn.classList.add('exc-animation');
@@ -197,7 +199,7 @@ function executeExchangeAnimation() {
     });
 }
 
-setInterval(executeExchangeAnimation, 8000);    //Vuelve a ejecutar la función cada 8 segundos
+setInterval(executeExchangeAnimation, 8000);  //Vuelve a ejecutar la función cada 8 segundos
 
 /*
 
