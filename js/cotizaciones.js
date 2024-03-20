@@ -28,7 +28,8 @@ getCotizaciones();
 setInterval(getCotizaciones, 1 * 60 * 1000); // Actualiza los datos cada 1 minuto (expresado en milisegundos)
 
 //Botones
-const btnOficial = document.querySelectorAll('.btn-oficial'),
+const botones = document.querySelectorAll('.boton-conversor'),
+      btnOficial = document.querySelectorAll('.btn-oficial'),
       btnBlue = document.querySelectorAll('.btn-blue'),
       btnBolsa = document.querySelectorAll('.btn-bolsa'),
       btnCcl = document.querySelectorAll('.btn-ccl'),
@@ -67,7 +68,6 @@ btnOficial.forEach(btn => {
     btn.addEventListener('click', () => {
         console.log(`$${cotizacionesData[monedas.indexOf("oficial")].venta}`);
 
-        const botones = document.querySelectorAll('.boton-conversor');
         botones.forEach(boton => boton.classList.remove('boton-seleccionado'));
 
         btn.classList.add('boton-seleccionado');
@@ -78,7 +78,6 @@ btnBlue.forEach(btn => {
     btn.addEventListener('click', () => {
         console.log(`$${cotizacionesData[monedas.indexOf("blue")].venta}`);
 
-        const botones = document.querySelectorAll('.boton-conversor');
         botones.forEach(boton => boton.classList.remove('boton-seleccionado'));
 
         btn.classList.add('boton-seleccionado');
@@ -89,7 +88,6 @@ btnBolsa.forEach(btn => {
     btn.addEventListener('click', () => {
         console.log(`$${cotizacionesData[monedas.indexOf("bolsa")].venta}`);
 
-        const botones = document.querySelectorAll('.boton-conversor');
         botones.forEach(boton => boton.classList.remove('boton-seleccionado'));
 
         btn.classList.add('boton-seleccionado');
@@ -100,7 +98,6 @@ btnCcl.forEach(btn => {
     btn.addEventListener('click', () => {
         console.log(`$${cotizacionesData[monedas.indexOf("ccl")].venta}`);
 
-        const botones = document.querySelectorAll('.boton-conversor');
         botones.forEach(boton => boton.classList.remove('boton-seleccionado'));
 
         btn.classList.add('boton-seleccionado');
@@ -111,7 +108,6 @@ btnMayorista.forEach(btn => {
     btn.addEventListener('click', () => {
         console.log(`$${cotizacionesData[monedas.indexOf("mayorista")].venta}`);
 
-        const botones = document.querySelectorAll('.boton-conversor');
         botones.forEach(boton => boton.classList.remove('boton-seleccionado'));
 
         btn.classList.add('boton-seleccionado');
@@ -122,7 +118,6 @@ btnCripto.forEach(btn => {
     btn.addEventListener('click', () => {
         console.log(`$${cotizacionesData[monedas.indexOf("cripto")].venta}`);
 
-        const botones = document.querySelectorAll('.boton-conversor');
         botones.forEach(boton => boton.classList.remove('boton-seleccionado'));
 
         btn.classList.add('boton-seleccionado');
@@ -133,7 +128,6 @@ btnTarjeta.forEach(btn => {
     btn.addEventListener('click', () => {
         console.log(`$${cotizacionesData[monedas.indexOf("tarjeta")].venta}`);
 
-        const botones = document.querySelectorAll('.boton-conversor');
         botones.forEach(boton => boton.classList.remove('boton-seleccionado'));
 
         btn.classList.add('boton-seleccionado');
