@@ -68,9 +68,13 @@ btnOficial.forEach(btn => {
     btn.addEventListener('click', () => {
         console.log(`$${cotizacionesData[monedas.indexOf("oficial")].venta}`);
 
-        botones.forEach(boton => boton.classList.remove('boton-seleccionado'));
+        if (btn.classList.contains('boton-seleccionado')) {
+            btn.classList.remove('boton-seleccionado');
+        } else {
+            botones.forEach(boton => boton.classList.remove('boton-seleccionado'));
+            btn.classList.add('boton-seleccionado');
+        }
 
-        btn.classList.add('boton-seleccionado');
     });
 });
 
@@ -78,9 +82,13 @@ btnBlue.forEach(btn => {
     btn.addEventListener('click', () => {
         console.log(`$${cotizacionesData[monedas.indexOf("blue")].venta}`);
 
-        botones.forEach(boton => boton.classList.remove('boton-seleccionado'));
+        if (btn.classList.contains('boton-seleccionado')) {
+            btn.classList.remove('boton-seleccionado');
+        } else {
+            botones.forEach(boton => boton.classList.remove('boton-seleccionado'));
+            btn.classList.add('boton-seleccionado');
+        }
 
-        btn.classList.add('boton-seleccionado');
     });
 });
 
@@ -88,9 +96,13 @@ btnBolsa.forEach(btn => {
     btn.addEventListener('click', () => {
         console.log(`$${cotizacionesData[monedas.indexOf("bolsa")].venta}`);
 
-        botones.forEach(boton => boton.classList.remove('boton-seleccionado'));
+        if (btn.classList.contains('boton-seleccionado')) {
+            btn.classList.remove('boton-seleccionado');
+        } else {
+            botones.forEach(boton => boton.classList.remove('boton-seleccionado'));
+            btn.classList.add('boton-seleccionado');
+        }
 
-        btn.classList.add('boton-seleccionado');
     });
 });
 
@@ -98,9 +110,13 @@ btnCcl.forEach(btn => {
     btn.addEventListener('click', () => {
         console.log(`$${cotizacionesData[monedas.indexOf("ccl")].venta}`);
 
-        botones.forEach(boton => boton.classList.remove('boton-seleccionado'));
+        if (btn.classList.contains('boton-seleccionado')) {
+            btn.classList.remove('boton-seleccionado');
+        } else {
+            botones.forEach(boton => boton.classList.remove('boton-seleccionado'));
+            btn.classList.add('boton-seleccionado');
+        }
 
-        btn.classList.add('boton-seleccionado');
     });
 });
 
@@ -108,9 +124,13 @@ btnMayorista.forEach(btn => {
     btn.addEventListener('click', () => {
         console.log(`$${cotizacionesData[monedas.indexOf("mayorista")].venta}`);
 
-        botones.forEach(boton => boton.classList.remove('boton-seleccionado'));
+        if (btn.classList.contains('boton-seleccionado')) {
+            btn.classList.remove('boton-seleccionado');
+        } else {
+            botones.forEach(boton => boton.classList.remove('boton-seleccionado'));
+            btn.classList.add('boton-seleccionado');
+        }
 
-        btn.classList.add('boton-seleccionado');
     });
 });
 
@@ -118,9 +138,13 @@ btnCripto.forEach(btn => {
     btn.addEventListener('click', () => {
         console.log(`$${cotizacionesData[monedas.indexOf("cripto")].venta}`);
 
-        botones.forEach(boton => boton.classList.remove('boton-seleccionado'));
+        if (btn.classList.contains('boton-seleccionado')) {
+            btn.classList.remove('boton-seleccionado');
+        } else {
+            botones.forEach(boton => boton.classList.remove('boton-seleccionado'));
+            btn.classList.add('boton-seleccionado');
+        }
 
-        btn.classList.add('boton-seleccionado');
     });
 });
 
@@ -128,9 +152,13 @@ btnTarjeta.forEach(btn => {
     btn.addEventListener('click', () => {
         console.log(`$${cotizacionesData[monedas.indexOf("tarjeta")].venta}`);
 
-        botones.forEach(boton => boton.classList.remove('boton-seleccionado'));
+        if (btn.classList.contains('boton-seleccionado')) {
+            btn.classList.remove('boton-seleccionado');
+        } else {
+            botones.forEach(boton => boton.classList.remove('boton-seleccionado'));
+            btn.classList.add('boton-seleccionado');
+        }
 
-        btn.classList.add('boton-seleccionado');
     });
 });
 
@@ -180,21 +208,6 @@ btnExchange.forEach(btn => {
     });
 });
 
-//Función que activa la animacion del btnExchange para que el usuario sepa que debe interactuar con el
-function executeExchangeAnimation() {
-    btnExchange.forEach(button => {
-        button.style.animationName = "rotate-center";
-        button.style.animationDuration = "1s";
-        button.style.animationTimingFunction = "ease";
-
-        setTimeout(() => {
-            button.style.animationName = "";
-        }, 1000);
-    });
-}
-
-setInterval(executeExchangeAnimation, 8000);  //Vuelve a ejecutar la función cada 8 segundos
-
 /*
 
 COMENTARIOS DE FUTURAS ACTUALIZACIONES:
@@ -203,7 +216,7 @@ COMENTARIOS DE FUTURAS ACTUALIZACIONES:
 para que aparezca cuando el usuario ejecuta btnExchange
 sin antes haber puesto un valor en los inputs
 
--Añadir la capacidad de sacar la clase 'boton-seleccionado' en caso de ya estar presente en dicho boton (con un if)
+-Renovar diseño del sitio ENTERO!!!
 
 */
 
