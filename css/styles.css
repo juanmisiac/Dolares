@@ -154,16 +154,16 @@ article a img:hover{
     box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.4);
     background-color:rgb(49, 29, 165) ;
     /*2d0882*/
+    transition: .1s ease;
 }
 .boton-conversor:hover{
-    transition: .1s ease;
     box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.5);
     transform: scale(1.03);
-    background-color: #260b67;
+    background-color: #2d0f74;
     cursor: pointer;
 }
 .boton-seleccionado{    /*Solo aplicado cuando se hace click mediante JS*/
-    background-color: #260b67;
+    background-color: #0b1367;
     box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.5);
     transform: scale(1.03);
 }
