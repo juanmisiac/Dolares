@@ -1,0 +1,43 @@
+body{
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+  background-color: #111;
+  color: white;
+}
+header{
+  display: flex;
+  padding-inline: 24px;
+  background-color: #222;
+  height: 64px;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #444;
+}
+h1{
+  cursor: default;
+}
+ul{
+  display: flex;
+}
+.nav-list{
+  list-style: none;
+  margin-inline-end: 12px;
+}
+.nav-a{
+  color: white;
+}
+.nav-btn{
+  background-color: transparent;
+  border: none;
+  border-radius: 4px;
+  padding: 4px;
+  outline: none;
+  color: white;
+  display: flex;
+  transition: .2s ease;
+}
+.nav-btn:hover{
+  background-color: #333;
+  cursor: pointer;
+}
