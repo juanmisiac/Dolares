@@ -5,6 +5,7 @@ body{
   background-color: #111;
   color: white;
 }
+
 header{
   display: flex;
   padding-inline: 24px;
@@ -40,4 +41,41 @@ ul{
 .nav-btn:hover{
   background-color: #333;
   cursor: pointer;
+}
+
+.values-table{
+  background-color: #222;
+  margin: 24px;
+  border: 1px solid #444;
+  border-radius: 6px;
+  width: 45vw;
+}
+.value{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 12px;
+  padding-inline: 24px;
+  background-color: #111;
+  border: 1px solid #444;
+  border-radius: 8px;
+  transition: .1s ease;
+}
+.value:hover{
+  background-color: #050505;
+  cursor: pointer;
+}
+h2{
+  font-size: 1.2em;
+  cursor: default;
+}
+.values{
+  display: flex;
+}
+.buy-value{
+  margin-right: 24px;
+  cursor: default;
+}
+.sell-value{
+  cursor: default;
 }
