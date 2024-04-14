@@ -1,81 +1,184 @@
-body{
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "Nunito", sans-serif;
-  background-color: #111;
-  color: white;
-}
+/*Declaracion de estilos genericos*/
+  
+  body{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+    background-color: #030303;
+    color: white;
+  }
+  #main{
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 
+    "valu pres"
+    "valu conv"
+    ;
+  }
 
-header{
-  display: flex;
-  padding-inline: 24px;
-  background-color: #222;
-  height: 64px;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #444;
-}
-h1{
-  cursor: default;
-}
-ul{
-  display: flex;
-}
-.nav-list{
-  list-style: none;
-  margin-inline-end: 12px;
-}
-.nav-a{
-  color: white;
-}
-.nav-btn{
-  background-color: transparent;
-  border: none;
-  border-radius: 4px;
-  padding: 4px;
-  outline: none;
-  color: white;
-  display: flex;
-  transition: .2s ease;
-}
-.nav-btn:hover{
-  background-color: #333;
-  cursor: pointer;
-}
+/*Declaracion de estilos del HEADER*/
 
-.values-table{
-  background-color: #222;
-  margin: 24px;
-  border: 1px solid #444;
-  border-radius: 6px;
-  width: 45vw;
-}
-.value{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 12px;
-  padding-inline: 24px;
-  background-color: #111;
-  border: 1px solid #444;
-  border-radius: 8px;
-  transition: .1s ease;
-}
-.value:hover{
-  background-color: #050505;
-  cursor: pointer;
-}
-h2{
-  font-size: 1.2em;
-  cursor: default;
-}
-.values{
-  display: flex;
-}
-.buy-value{
-  margin-right: 24px;
-  cursor: default;
-}
-.sell-value{
-  cursor: default;
-}
+  header{
+    display: flex;
+    padding-inline: 32px;
+    background-color: #060606;
+    height: 64px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333;
+  }
+  h1{
+    cursor: default;
+  }
+  ul{
+    display: flex;
+  }
+  .nav-list{
+    list-style: none;
+    margin-inline-end: 12px;
+  }
+  .nav-a{
+    color: white;
+  }
+  .nav-btn{
+    background-color: transparent;
+    border: none;
+    border-radius: 4px;
+    padding: 6px;
+    outline: none;
+    color: white;
+    display: flex;
+    transition: .2s ease;
+  }
+  .nav-btn:hover{
+    background-color: #222;
+    cursor: pointer;
+  }
+
+/*Declaracion de estilos del MAIN*/
+
+  .presentacion-section{
+    grid-area: pres;
+    margin: 16px 32px 0px;
+    font-size: 1.2em;
+  }
+  .values-table{
+    grid-area: valu;
+    background-color: #060606;
+    margin: 32px 16px 32px 32px;
+    border: 1px solid #333;
+    border-radius: 6px;
+    width: 40vw;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+  .values-table::-webkit-scrollbar{
+    width: 12px;
+  }
+  .values-table::-webkit-scrollbar-thumb{
+    background-color: #444;
+    border-radius: 4px;
+  }
+  .values-table::-webkit-scrollbar-thumb:active{
+    background-color: #333;
+  }
+  .values{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 12px;
+    padding-inline: 12px;
+    background-color: #030303;
+    border: 1px solid #333;
+    border-radius: 8px;
+    transition: .1s ease;
+    font-size: .85rem;
+  }
+  .values:hover{
+    cursor: pointer;
+    border: 1px solid #494;
+  }
+  h2{
+    font-size: 1.2em;
+    cursor: default;
+  }
+  .value{
+    flex-direction: column;
+    line-height: 8px;
+    text-align: end;
+  }
+  .buy-value{
+    cursor: default;
+  }
+  .sell-value{
+    cursor: default;
+  }
+
+/*Declaracion de los estilos de los CONVERSORES (+ Tabs)*/
+
+  .conversor-section{
+    grid-area: conv;
+    background-color: #060606;
+    margin: 12px 32px 32px;
+    border: 1px solid #333;
+    border-radius: 6px;
+  }
+  .tabs-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: auto;
+    border-bottom: 1px solid #333;
+  }
+  .tabs-trigger{
+    padding: 6px 12px;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    background-color: #060606;
+    color: #999;
+    font-size: 1em;
+    font-family: "Nunito";
+    font-weight: 600;
+    transition: .2s ease;
+    cursor: pointer;
+  }
+  .tabs-trigger[data-state='active']{
+    color: white;
+    font-size: 1.02em;
+    background-color: #030303;
+  }
+  .tabs-content{
+    display: flex;
+    flex-direction: column;
+    margin-inline: 24px;
+  }
+  .tabs-content > h2{
+    margin-bottom: 0;
+  }
+  .tabs-content > p{
+    margin-top: 4px;
+    margin-bottom: 16px;
+  }
+  .inputs{
+    display: flex;
+  }
+  .input-pesos{
+    background-color: #030303;
+    border: none;
+    padding: 8px;
+    border: 1px solid #333;
+    border-radius: 4px;
+  }
+  .input-dolar{
+    background-color: #030303;
+    border: none;
+    padding: 8px;
+    border: 1px solid #333;
+    border-radius: 4px;
+  }
+  .exchange-btn{
+    background-color: transparent;
+    border: none;
+    color: white;
+    margin-inline: 8px;
+  }
