@@ -27,8 +27,16 @@
     align-items: center;
     border-bottom: 1px solid #333;
   }
+  .header-title{
+    display: flex;
+    align-items: center;
+  }
   h1{
     cursor: default;
+    margin-left: 12px;
+  }
+  .logo{
+    width: 36px;
   }
   ul{
     display: flex;
@@ -94,6 +102,11 @@
     transition: .1s ease;
     font-size: .85rem;
   }
+  .selected{
+    background-color: #030603;
+    border: 1px solid #494;
+    transform: scale(1.01);
+  }
   .values:hover{
     cursor: pointer;
     border: 1px solid #494;
@@ -119,9 +132,9 @@
   .conversor-section{
     grid-area: conv;
     background-color: #060606;
-    margin: 12px 32px 32px;
+    margin: 0px 32px 32px;
     border: 1px solid #333;
-    border-radius: 6px;
+    border-radius: 7px;
   }
   .tabs-list{
     display: grid;
@@ -133,7 +146,7 @@
     padding: 6px 12px;
     outline: none;
     border: none;
-    border-radius: 6px;
+    border-radius: 6px 6px 0px 0px;
     background-color: #060606;
     color: #999;
     font-size: 1em;
@@ -145,7 +158,8 @@
   .tabs-trigger[data-state='active']{
     color: white;
     font-size: 1.02em;
-    background-color: #030303;
+    background-color: #030603;
+    border: 1px solid #494;
   }
   .tabs-content{
     display: flex;
@@ -154,10 +168,12 @@
   }
   .tabs-content > h2{
     margin-bottom: 0;
+    font-size: 1.5rem;
   }
   .tabs-content > p{
     margin-top: 4px;
     margin-bottom: 16px;
+    font-size: 1.1rem;
   }
   .inputs{
     display: flex;
@@ -168,6 +184,10 @@
     padding: 8px;
     border: 1px solid #333;
     border-radius: 4px;
+    color: white;
+    text-align: center;
+    outline: none;
+    font-size: 1.1rem;
   }
   .input-dolar{
     background-color: #030303;
@@ -175,10 +195,20 @@
     padding: 8px;
     border: 1px solid #333;
     border-radius: 4px;
+    color: white;
+    text-align: center;
+    outline: none;
+    font-size: 1.1rem;
   }
   .exchange-btn{
     background-color: transparent;
     border: none;
     color: white;
     margin-inline: 8px;
+    cursor: pointer;
+    transition: .1s ease;
+    
+  }
+  .exchange-btn:hover{
+    transform: scale(1.1);
   }

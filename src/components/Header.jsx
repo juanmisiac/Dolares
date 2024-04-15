@@ -1,7 +1,10 @@
 export const Header = () => {
   return (
     <header>
-      <h1>Dólarcito</h1>
+      <div className="header-title">
+        <img src="src\img\logo.webp" alt="logo" className="logo"/>
+        <h1>Dólarcito</h1>
+      </div>
       <nav>
         <ul>
           <li className="nav-list">
