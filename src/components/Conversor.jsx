@@ -6,13 +6,13 @@ export const Conversor = () => {
       <Tabs.Root defaultValue='ARS'>
         
         <Tabs.List className='tabs-list'>
-          <Tabs.Trigger className='tabs-trigger' value='ARS'>Pesos a Dolares</Tabs.Trigger>
-          <Tabs.Trigger className='tabs-trigger' value='USD'>Dolares a Pesos</Tabs.Trigger>
+          <Tabs.Trigger className='tabs-trigger' value='ARS'>Pesos a Dólares</Tabs.Trigger>
+          <Tabs.Trigger className='tabs-trigger' value='USD'>Dólares a Pesos</Tabs.Trigger>
         </Tabs.List>
         
         <Tabs.Content className='tabs-content' value='ARS'>
-          <h2>Convertir Pesos a Dolares</h2>
-          <p>Seleccione una cotización de la lista y haga la conversión</p>
+          <h2>Convertir Pesos a Dólares</h2>
+          <p>Seleccione una cotización de la lista y realice la conversión.</p>
           <div className='inputs'>
             <input type="text" className='input-pesos' placeholder='ARS'/>
             <button className='exchange-btn'>
@@ -23,8 +23,8 @@ export const Conversor = () => {
         </Tabs.Content>
         
         <Tabs.Content className='tabs-content' value='USD'>
-          <h2>Convertir Dolares a Pesos</h2>
-          <p>Seleccione una cotización de la lista y haga la conversión</p>
+          <h2>Convertir Dólares a Pesos</h2>
+          <p>Seleccione una cotización de la lista y realice la conversión.</p>
           <div className='inputs'>
             <input type="text" className='input-dolar' placeholder='USD'/>
             <button className='exchange-btn'>
