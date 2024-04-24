@@ -4,7 +4,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: "Nunito", sans-serif;
-    background: linear-gradient(to bottom, #010101dd, #010101dd), url(./img/dólares-bg.webp);
+    background: linear-gradient(to bottom, #010101dd, #010101dd), url(./img/dólares-bg2.webp);
     background-size: cover;
     color: white;
   }
