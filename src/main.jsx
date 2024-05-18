@@ -10,12 +10,12 @@ import './index.css'
 const Main = () => {
   const [selectedItemIndex, setSelectedItemIndex] = useState(null);
 
-  const handleSelectedItemChange = (index) => {
-    setSelectedItemIndex(index);
+  const handleSelectedItemChange = (index, item) => {
+    setSelectedItemIndex({index, item});
   };
 
   /* Se envia a TablaDeValores.jsx la función handleSelectedItemChange bajo el nombre de "onSelectedItemChange",
-  esta función recibe el valor del index seleccionado y lo trae hacia el main.jsx (padre) 
+  esta función recibe el valor del index y el item seleccionado y lo trae hacia el main.jsx (padre) 
   para pasarselo al Conversor.jsx */
 
   return (

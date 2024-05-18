@@ -14,7 +14,7 @@ export const TablaDeValores = ({ onSelectedItemChange }) => {
 
   const handleItemClick = (index, item) => {
     selectedValue(index, item);
-    onSelectedItemChange(index); // Llama a la función enviada desde main.jsx para pasarle los datos a Conversor.jsx
+    onSelectedItemChange(index, item); // Llama a la función enviada desde main.jsx para pasarle los datos a Conversor.jsx
   };
 
   return (
