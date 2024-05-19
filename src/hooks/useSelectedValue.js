@@ -6,7 +6,6 @@ export const useSelectedValue = () => {
 
   const selectedValue = (index, item) => {
     setSelectedItem(index)
-    console.log(`Indice: ${index} Compra: ${item.compra} Venta: ${item.venta}`)
   };
 
   // Retorna el estado y la función como parte del objeto
