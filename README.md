@@ -1,8 +1,5 @@
-# React + Vite
+# Dólarcito💱
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+SPA desarrollada con React que muestra las diferentes cotizaciones del Dólar en Argentina! <br><br>
+<img src="https://media.licdn.com/dms/image/D4D22AQGSPCY4S7CuEw/feedshare-shrink_800/0/1713902844816?e=1718841600&v=beta&t=GRkbVGHpCDLGn_GQxvT9Btre5BQigNb8ETdtqB4xv2U"/> <br><br>
+Consumiendo la DolarApi desarrollada por <a href="https://github.com/enzonotario">Enzo Notario</a>
