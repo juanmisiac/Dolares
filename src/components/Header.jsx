@@ -2,7 +2,6 @@ export const Header = () => {
   return (
     <header>
       <div className="header-title">
-        <img src="src\img\logo.webp" alt="logo" className="logo"/>
         <h1>Dólarcito</h1>
       </div>
       <nav>
