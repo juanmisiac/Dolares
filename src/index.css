@@ -36,9 +36,6 @@
     cursor: default;
     margin-left: 12px;
   }
-  .logo{
-    width: 36px;
-  }
   ul{
     display: flex;
   }
@@ -219,4 +216,108 @@
   }
   .exchange-btn:hover{
     transform: scale(1.15);
+  }
+
+/*>>> MEDIA QUERIES <<<*/
+
+  @media (min-width: 320px) and (max-width: 480px){  /*Dispositivos moviles pequeños*/
+
+    #main{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /*Header*/
+      header{
+        font-size: .70rem;
+        padding-inline: 12px;
+        height: 48px;
+      }
+      .nav-btn{
+        padding: 3px;
+      }
+      .nav-btn svg{
+        width: 25px;
+      }
+
+    /*Presentacion*/
+      .presentacion-section{
+        font-size: .95rem;
+        margin: 2px 24px;
+        text-align: center;
+      }
+
+    /*Tabla de Valores*/
+      .values-table{
+        display: flex;
+        flex-direction: column;
+        width: 80vw;
+        max-height: fit-content;
+        margin-top: 0;
+        margin-inline: 24px;
+      }
+      .values{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        height: 60px;
+        margin: 4px 8px;
+      }
+      .values:first-child{
+        margin-top: 8px;
+      }
+      .values:last-child{
+        margin-bottom: 8px;
+      }
+      .dolar-type{
+        font-size: .9rem;
+        margin-top: 6px;
+        margin-bottom: 0;
+      }
+      .value{
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+      }
+      .buy-value{
+        margin-right: 12px;
+      }
+
+    /*Conversor*/
+      .conversor-section{
+        width: 80vw;
+      }
+      .tabs-list{
+        font-size: .82rem;
+      }
+      .tabs-content h2{
+        font-size: 1.075rem;
+        text-align: center;
+      }
+      .tabs-content p{
+        font-size: .9rem;
+        text-align: center;
+      }
+      .inputs{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+      }
+      .input-dolar,
+      .input-pesos{
+        padding: 6px;
+        font-size: .95rem;
+      }
+      .exchange-btn{
+        margin-block: 8px;
+      }
+      /*
+      grid-area: conv;
+      background-color: #060606;
+      margin: 0px 32px 32px;
+      border: 1px solid #333;
+      border-radius: 7px;
+      */
   }
