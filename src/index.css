@@ -127,11 +127,10 @@
     line-height: 8px;
     text-align: end;
   }
-  .buy-value{
-    cursor: default;
-  }
+  .dolar-type,
+  .buy-value,
   .sell-value{
-    cursor: default;
+    cursor: pointer;
   }
 
 /*Declaracion de los estilos de los CONVERSORES (+ Tabs)*/
